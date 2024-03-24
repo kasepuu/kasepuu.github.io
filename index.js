@@ -1,20 +1,13 @@
-const gameDiv = document.getElementById("gameToggle")
-let gamePlaying = false
+import { floatingElement } from "./javascript/floatingelement.js"
 
-gameDiv.addEventListener("click", () => gamePlaying ? (closeGame(), gamePlaying = false) : (openGame(), gamePlaying = true));
+function setupBackground(){
+  let userDetails = navigator.userAgent;
+  let regexp = /android|iphone|kindle|ipad/i
+  let isOnMobile = regexp.test(userDetails)
+  console.log(isOnMobile ? "Welcome, Mobile user!": "Welcome!")
+  document.body.background = isOnMobile ? "background_smallres.jpg" : "background.jpg" // "background_huvitav.jpg"
+  document.body.className = isOnMobile ? "mobile": "pc"
+}
 
-
-    function openGame(){
-        gameDiv.innerHTML = `
-        Close the game X
-        <div className="game">
-        <iframe
-          className="center-vertically"
-          src="http://backend.joelsoft.eu:1111"
-          title="make-your-game"
-        />
-      </div>`
-    }
-    function closeGame(){
-        gameDiv.innerHTML = `Play leprechaun the game!`
-    }
+setupBackground()
+floatingElement()

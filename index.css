@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  color: white;
+  font-style: oblique;
+  overflow: hidden;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  animation: cinematicMovement 120s linear infinite alternate;
+}
+
+@keyframes cinematicMovement {
+  0% {
+    background-position: 1% 2%;
+  }
+
+  50% {
+    background-position: 30% 80%;
+  }
+
+  100% {
+    background-position: 2% 1%;
+  }
+}
+
+.info-container {
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+}
+
+.page-name {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, yellow 0%, yellow 25%, green 75%, green 100%);
+  border-image-slice: 1;
+}
+
+.page-description {
+  position: relative;
+  top: 100px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*******************\
+* FLOATING ELEMENT  *
+*       CSS         *
+\*******************/
+#floating-element {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
