@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const vh = window.innerHeight;
   buttons.forEach(btn => {
     if (!btn) return;
+    btn.addEventListener('click', () => {
+      const href = btn.getAttribute('data-href');
+      if (href) window.location.href = href;
+    });
     btn.style.visibility = 'hidden';
     btn.style.left = '0px';
     btn.style.top = '0px';
