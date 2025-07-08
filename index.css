@@ -61,3 +61,68 @@ body {
   width: 100px;
   height: 100px;
 }
+
+button {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75em 2em;
+  margin: 0.5em 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 16px rgba(30,60,114,0.2);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+  outline: none;
+}
+
+button:hover, button:focus {
+  background: linear-gradient(90deg, #2a5298 0%, #1e3c72 100%);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(42,82,152,0.3);
+}
+
+.app-shortcut-btn {
+  position: absolute;
+  margin: 0;
+  background: url('background_smallres.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 16px rgba(30,60,114,0.2);
+  color: #fff;
+  border: 2.5px solid #000;
+  border-radius: 12px;
+  padding: 0.75em 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+  outline: none;
+  /* Overlay for readability */
+  position: absolute;
+  overflow: hidden;
+}
+.app-shortcut-btn::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30,60,114,0.5);
+  mix-blend-mode: multiply;
+  z-index: 0;
+  border-radius: 12px;
+}
+.app-shortcut-btn span {
+  position: relative;
+  z-index: 1;
+}
+.app-shortcut-btn:hover, .app-shortcut-btn:focus {
+  background: url('background_smallres.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.2) saturate(1.2);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(42,82,152,0.3);
+}
