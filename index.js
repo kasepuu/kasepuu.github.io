@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const buttons = [
     document.getElementById("btn-countdown"),
     document.getElementById("btn-snake"),
-    document.getElementById("btn-leksikas")
+    document.getElementById("btn-leksikas"),
+    document.getElementById("btn-leprechaun-the-game")
   ];
   const padding = 20;
   const vw = window.innerWidth;
